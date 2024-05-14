@@ -15,6 +15,9 @@ import {
   deleteUserFailure,
   deleteUserStart,
   deleteUserSuccess,
+  signOutUserStart,
+  signOutUserFailure,
+  signOutUserSuccess,
 } from "../redux/user/userSlice.js";
 import { useDispatch } from "react-redux";
 
@@ -103,6 +106,21 @@ export default function Profile() {
     }
   };
 
+  const handleSignOut = async () => {
+    try {
+      dispatch(signOutUserStart());
+      const res = await fetch("/api/auth/signout");
+      const data = await res.json();
+      if (data.success === false) {
+        dispatch(deleteUserFailure(data.message));
+        return;
+      }
+      dispatch(deleteUserSuccess(data));
+    } catch (error) {
+      dispatch(deleteUserFailure(data.message));
+    }
+  };
+
   return (
     <div className="p-4 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -112,7 +130,7 @@ export default function Profile() {
           type="file"
           ref={fileRef}
           hidden
-          accept="image/  *"
+          accept="image/*"
         />
         <img
           onClick={() => fileRef.current.click()}
@@ -157,7 +175,7 @@ export default function Profile() {
           className="border rounded-lg mt-6 p-3"
         />
         <button
-          disabled={loading}
+          // disabled={loading}
           className="bg-slate-800 text-white rounded-lg p-3 uppercase mt-6 hover:opacity-90 disabled:opacity-75"
         >
           {loading ? "Loading..." : "Update"}
@@ -173,7 +191,12 @@ export default function Profile() {
         >
           delete account
         </span>
-        <span className="uppercase text-rose-900 cursor-pointer">sign out</span>
+        <span
+          onClick={handleSignOut}
+          className="uppercase text-rose-900 cursor-pointer"
+        >
+          sign out
+        </span>
       </div>
 
       <p className="text-green-900 mt-5">
