@@ -180,9 +180,9 @@ export default function Profile() {
         >
           {loading ? "Loading..." : "Update"}
         </button>
-        {/* <button className="bg-green-900 rounded-lg uppercase p-3 mt-6 hover:opacity-90 disabled:opacity-75 text-white">
+        <button className="bg-green-900 rounded-lg uppercase p-3 mt-6 hover:opacity-90 disabled:opacity-75 text-white">
           create listing
-        </button> */}
+        </button>
       </form>
       <div className=" flex mt-5 justify-between">
         <span
