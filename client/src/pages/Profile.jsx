@@ -31,6 +31,8 @@ export default function Profile() {
   const [fileUploadError, setFileUploadError] = useState(false);
   const [formData, setFormData] = useState({});
   const [updateSuccess, setUpdateSuccess] = useState(false);
+  const [showListingError, setShowListingError] = useState(false);
+  const [userListings, setUserListings] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -122,6 +124,21 @@ export default function Profile() {
     }
   };
 
+  const handleShowListings = async () => {
+    try {
+      setShowListingError(false);
+      const res = await fetch(`/api/user/listings/${currentUser._id}`);
+      const data = await res.json();
+      if (data.success === false) {
+        setShowListingError(false);
+        return;
+      }
+      setUserListings(data);
+    } catch (error) {
+      setShowListingError(true);
+    }
+  };
+
   return (
     <div className="p-4 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -207,6 +224,54 @@ export default function Profile() {
       <p className="text-green-900 mt-5">
         {updateSuccess ? "User is updated successfully!" : ""}
       </p>
+
+      <button
+        onClick={handleShowListings}
+        className="text-green-900 text-base w-full uppercase hover:opacity-80"
+      >
+        Show Listings
+      </button>
+      <p className="text-rose-900 text-base w-full">
+        {showListingError ? "Error showing listings" : ""}
+      </p>
+
+      {userListings && userListings.length > 0 && (
+        <div className="flex flex-col">
+          <h1 className="text-center mt-10 text-slate-900 font-semibold text-2xl">
+            Your Listings
+          </h1>
+          {userListings.map((listing) => (
+            <div
+              key={listing._id}
+              className="flex justify-between text-slate-800 text-base uppercase border rounded-lg mt-6 items-center p-3"
+            >
+              <div className="flex flex-col">
+                <Link to={`/listing/${listing._id}`}>
+                  <img
+                    src={listing.imageUrls[0]}
+                    alt="listing cover"
+                    className="h-40 w-48 object-contain"
+                  />
+                </Link>
+                <Link
+                  className="flex-1 font-semibold truncate  hover:underline"
+                  to={`/listing/${listing._id}`}
+                >
+                  <p>{listing.name}</p>
+                </Link>
+              </div>
+              <div className="flex flex-col">
+                <button class="text-rose-700 hover:text-white border border-rose-900 hover:bg-rose-900 focus:ring-4 focus:outline-none focus:ring-rose-300 font-semibold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-rose-500 dark:text-rose-500 dark:hover:text-white dark:hover:bg-rose-800 dark:focus:ring-rose-900 uppercase">
+                  delete
+                </button>
+                <button class="text-green-700 hover:text-white border border-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-900 dark:focus:ring-green-800 uppercase">
+                  edit
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
