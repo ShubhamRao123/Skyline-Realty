@@ -157,6 +157,7 @@ export default function Profile() {
       console.log(error.message);
     }
   };
+
   return (
     <div className="p-4 max-w-lg mx-auto ">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -281,13 +282,15 @@ export default function Profile() {
               <div className="flex flex-col">
                 <button
                   onClick={() => handleListingDelete(listing._id)}
-                  class="text-rose-700 hover:text-white border border-rose-900 hover:bg-rose-900 focus:ring-4 focus:outline-none focus:ring-rose-300 font-semibold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-rose-500 dark:text-rose-500 dark:hover:text-white dark:hover:bg-rose-800 dark:focus:ring-rose-900 uppercase"
+                  className="text-rose-700 hover:text-white border border-rose-900 hover:bg-rose-900 focus:ring-4 focus:outline-none focus:ring-rose-300 font-semibold rounded-lg text-sm  py-2.5 text-center me-2 mb-2 dark:border-rose-500 dark:text-rose-500 dark:hover:text-white dark:hover:bg-rose-800 dark:focus:ring-rose-900 uppercase"
                 >
                   delete
                 </button>
-                <button class="text-green-700 hover:text-white border border-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-900 dark:focus:ring-green-800 uppercase">
-                  edit
-                </button>
+                <Link to={`/update-listing/${listing._id}`}>
+                  <button className="text-green-700 hover:text-white border border-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-900 dark:focus:ring-green-800 uppercase">
+                    edit
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
