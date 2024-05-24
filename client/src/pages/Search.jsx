@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ListingItem from "../components/ListingItem";
 
 export default function Search() {
   const navigate = useNavigate();
@@ -242,10 +243,16 @@ export default function Search() {
             </p>
           )}
 
+          {!loading &&
+            listings &&
+            listings.map((listing) => (
+              <ListingItem key={listing._id} listing={listing} />
+            ))}
+
           {showMore && (
             <button
               onClick={onShowMoreClick}
-              className="text-green-700 hover:underline p-7 text-center w-full"
+              className="text-emerald-800 font-semibold hover:underline p-7 text-center w-full hover:opacity-85"
             >
               Show more
             </button>
