@@ -118,7 +118,7 @@ export default function Listing() {
               </p>
               {listing.offer && (
                 <p className="bg-emerald-900 w-full max-w-[200px] text-white text-center p-2 rounded-md">
-                  ${+listing.regularPrice - +listing.discountPrice} OFF
+                  ₹{+listing.regularPrice - +listing.discountPrice} OFF
                 </p>
               )}
             </div>
