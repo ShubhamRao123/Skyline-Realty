@@ -1,14 +1,15 @@
-Project Link: https://skyline-realty.onrender.com/
+# Project Link: 
+  https://skyline-realty.onrender.com/
 
-Skyline Realty - MERN Stack Real Estate Platform
+# Skyline Realty - MERN Stack Real Estate Platform
 
-Overview:
+# Overview:
 
   Skyline Realty is a MERN stack project that allows users to list, rent, or sell properties. It provides comprehensive features for property management, including filtering     options and user authentication.
 
-Features:
+# Features:
 
-   Property Listing: Owners can list their properties for rent or sale on the platform. ✅
+  Property Listing: Owners can list their properties for rent or sale on the platform. ✅
   
    Property Management: Owners with multiple real estate properties can manage them efficiently. ✅
   
@@ -23,7 +24,7 @@ Features:
   
   Property Editing and Deletion: Users with multiple listings can edit or delete specific properties. ✅
 
-Getting Started:
+# Getting Started:
 
   Follow these instructions to get a copy of the project up and running on your local machine.
   
@@ -33,7 +34,7 @@ Getting Started:
     MongoDB
     npm
 
-Installation:
+# Installation:
 
   Clone the repository:
 
@@ -59,7 +60,7 @@ Installation:
 
    This will start both the server and the client.
 
-Usage:
+# Usage:
 
   Listing Properties: Navigate to the "Add Property" section and fill out the form to list a property.
   
@@ -69,6 +70,6 @@ Usage:
   
   Contacting Owners: Sign up or log in to contact property owners or list your own property.
 
-Contributing:
+# Contributing:
 
   Contributions are welcome! Please fork the repository and create a pull request with your changes.
