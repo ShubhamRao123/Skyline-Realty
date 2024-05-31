@@ -9,7 +9,9 @@ Skyline Realty is a MERN stack project that allows users to list, rent, or sell 
 Features:
 
   Property Listing: Owners can list their properties for rent or sale on the platform. ✅
+  
   Property Management: Owners with multiple real estate properties can manage them efficiently. ✅
+  
   Property Filtering:
     Rent
     Sale
@@ -17,6 +19,7 @@ Features:
     Amenities: Parking and Furnished
     Price 💵
   User Authentication: Users must sign up to contact property owners or list properties. ✅
+  
   Property Editing and Deletion: Users with multiple listings can edit or delete specific properties. ✅
 
 Getting Started:
