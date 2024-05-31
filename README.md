@@ -1,4 +1,4 @@
-![Recent Offers](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/f41194a1-0b0b-479e-9d17-9ebdd92d611e)# Project Link: 
+# Project Link: 
   https://skyline-realty.onrender.com/
 
 # Skyline Realty - MERN Stack Real Estate Platform
