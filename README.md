@@ -1,4 +1,4 @@
-# Project Link: 
+![Recent Offers](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/f41194a1-0b0b-479e-9d17-9ebdd92d611e)# Project Link: 
   https://skyline-realty.onrender.com/
 
 # Skyline Realty - MERN Stack Real Estate Platform
@@ -23,6 +23,20 @@
   User Authentication: Users must sign up to contact property owners or list properties. ✅
   
   Property Editing and Deletion: Users with multiple listings can edit or delete specific properties. ✅
+
+# Screenshot:
+
+![Home](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/6570c9cf-4563-4143-aa2e-b82d674b21bc)
+![Recent Offers](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/cd8da9c7-139e-4383-b056-2f8619db54d3)
+![Recent Places for sale](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/d41990c1-745b-4aad-8533-cf2d6a311a38)
+
+![Filter](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/bda1236d-1915-4e25-a4e4-e77bd315c148)
+![Create Listing](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/30691459-69cb-40b7-b3f4-3c0c723ac5b0)
+
+![Show Listing](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/deb24a74-33a0-4dc4-96ce-e7de94ed9b59)
+![About](https://github.com/ShubhamRao123/Skyline-Realty/assets/90718744/66d4583d-0809-4062-a0e0-04cace47e9c5)
+
+
 
 # Getting Started:
 
