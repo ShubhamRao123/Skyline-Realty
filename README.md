@@ -18,6 +18,7 @@ Features:
     Offer
     Amenities: Parking and Furnished
     Price 💵
+    
   User Authentication: Users must sign up to contact property owners or list properties. ✅
   
   Property Editing and Deletion: Users with multiple listings can edit or delete specific properties. ✅
